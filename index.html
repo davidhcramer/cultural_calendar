@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#193b51"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Culture"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="manifest" href="/cultural_calendar/manifest.webmanifest"><link rel="icon" href="/cultural_calendar/icon.svg"><link rel="apple-touch-icon" href="/cultural_calendar/icon-192.png"><title>Cultural calendar</title></head><body><section id="auth-panel" class="auth-panel"><h1>Cultural calendar</h1><p>Your exhibitions, theatre, artists and visit notes.</p>
+<form id="login-form"><label for="login-email">Email</label><input id="login-email" type="email" autocomplete="email" required><button id="send-link" type="submit" class="decision-save">Email me a sign-in link</button></form>
+<p id="auth-status" role="status" aria-live="polite">Sign in to open your private calendar.</p><button id="retry-load" hidden>Try loading again</button></section><div id="diary-content" hidden>
+<header><h1>Cultural calendar</h1><p>Major exhibitions worldwide. London galleries, open studios and literary theatre.</p><div class="meta" id="run-meta"></div><p id="connection-status" role="status" aria-live="polite"></p></header>
+<div class="layout"><aside aria-label="Diary filters">
+<section class="rail-block"><h2>What to look for</h2><div class="filters" id="category-filters"></div></section>
+<section class="rail-block"><h2>Priority</h2><select id="priority" aria-label="Priority"><option value="all">Every priority</option><option value="A">A · Make a decision</option><option value="B">B · Strong option</option><option value="C">C · Keep in view</option></select><p>Priority reflects your interests, the opportunity and any time pressure.</p></section>
+<section class="rail-block"><h2>Your choices</h2><button class="full" id="export-decisions">Download backup</button><button class="full" id="import-decisions">Import old diary</button><input type="file" id="decision-file" accept=".json,application/json" hidden><button class="full" id="export-ics">Export shortlist dates</button><div class="small" id="saved-status" role="status">Save notes and decisions to keep them across your devices.</div><p class="small">Calendar export contains opening, closing and announced booking dates. It does not reserve a visit or subscribe to updates.</p></section>
+<section><h2>Your account</h2><button id="sync-now" class="full">Check for updates</button><button id="sign-out" class="full">Sign out</button><p id="account-email" class="small"></p><p class="small">On your phone, use the browser menu to add this calendar to your home screen.</p></section>
+</aside><main><div id="stale-banner" class="notice hidden"></div>
+<div class="toolbar" id="event-toolbar"><label for="search" class="sr-only">Search artist, venue, city or Frieze week</label><input id="search" type="search" placeholder="Search artist, venue, city or Frieze week"><select id="month" aria-label="Month"><option value="all">Any month</option></select></div>
+<div class="views" id="view-filters"></div>
+<div class="review-options" id="event-review-options"><label class="review-toggle"><input type="checkbox" id="hide-reviewed" checked> Hide reviewed</label><label class="review-toggle"><input type="checkbox" id="still-considering"> Still considering</label><span id="review-filter-note" class="small">Save a decision to clear it from this view.</span></div>
+<p id="review-feedback" class="review-feedback" role="status" aria-live="polite"></p>
+<div class="calendar-controls" id="calendar-controls" hidden><button id="previous-month" aria-label="Previous month">Previous month</button><h2 id="calendar-month-title"></h2><button id="next-month" aria-label="Next month">Next month</button></div>
+<p id="calendar-explanation" class="calendar-explanation" hidden>Every date in the selected month is shown, with events spanning that date. Published opening days and confirmed performance dates are used where recorded. Other runs are marked for checking; they do not confirm a performance or admission that day.</p>
+<section id="artists-panel" hidden aria-labelledby="artists-heading">
+<h2 id="artists-heading" class="artist-heading">Artists to follow</h2>
+<p>Add artists you want to hear about. Each refresh will look for news, exhibitions and works for sale.</p>
+<p class="small">Saved artists are available on your other devices and included in your next research refresh.</p>
+<form id="artist-form" class="artist-form">
+<input id="artist-id" type="hidden"><input id="artist-version" type="hidden">
+<label>Artist name <input id="artist-name" required maxlength="200" placeholder="Name"></label>
+<label>Website or gallery link (optional)<input id="artist-url" type="url" placeholder="https://"></label>
+<label>Your notes<textarea id="artist-notes" placeholder="What interests you, where you encountered them, or work to look for"></textarea></label>
+<div class="artist-actions"><button class="decision-save" type="submit">Save artist</button><button id="artist-cancel" type="button">Clear form</button></div>
+</form><p id="artist-feedback" role="status" aria-live="polite"></p><div id="artist-list"></div></section>
+<p id="result-count" aria-live="polite"></p><div id="events"></div>
+<details class="coverage"><summary id="coverage-summary">Source coverage</summary><p class="small">An event-page check verifies that event, not the institution’s whole programme. Dates below are the last attempted source checks. Unchecked sources are a search plan, not evidence of an empty calendar.</p><table><thead><tr><th>Source</th><th>Result</th><th>Checked</th><th>Scope / limitation</th></tr></thead><tbody id="sources"></tbody></table></details>
+<footer>Public announcements are incomplete, especially for small studios, student shows and fringe theatre. Records can outlive their evidence; the last-check date stays visible. Your decisions do not alter the published event facts.</footer>
+</main></div>
+<dialog id="export-dialog"><h2>Export shortlist dates</h2><p>This exports dates for events marked <strong>Considering</strong>, <strong>Will book, need a date</strong> or <strong>Booked</strong>. Each is clearly labelled as an opening, closing or booking milestone. It creates no personal appointment.</p><p>Repeated file imports can duplicate entries in some calendar apps. This is a snapshot, not a live subscription.</p><p id="export-summary"></p><button id="confirm-export">Download .ics file</button> <button id="cancel-export">Cancel</button></dialog>
+<dialog id="event-dialog" aria-label="Event details"><div class="dialog-top"><button id="close-event-dialog">Close event</button></div><div id="event-dialog-body"></div></dialog>
+</div>
+<script type="module" src="/src/main.js"></script></body></html>
