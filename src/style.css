@@ -12,3 +12,15 @@
 
 .auth-panel{max-width:480px;margin:12vh auto;padding:28px}.auth-panel h1{font:normal 38px/1.15 Georgia,serif;color:var(--blue)}.auth-panel label,.auth-panel input{display:block;width:100%;margin:12px 0}.auth-panel input{padding:11px}.auth-panel button{margin-top:12px}#connection-status{font-size:14px;margin-top:12px;min-height:22px}.saving{opacity:.65;pointer-events:none}.conflict{background:#fff5d9;border-left:4px solid var(--ochre);padding:12px}.visit-fields textarea{min-height:110px}.artist-actions button{min-height:44px}input,select,button{min-height:42px}.event summary{scroll-margin-top:12px}textarea{font-size:16px!important}.artist-form button{width:auto}#artist-feedback:empty{display:none}@media(max-width:800px){header{padding-top:max(22px,env(safe-area-inset-top))}.layout{padding-bottom:calc(35px + env(safe-area-inset-bottom))}.views{gap:8px}.views button{min-height:44px}.event-heading h3{font-size:21px}aside{display:block}aside .rail-block{margin-bottom:12px}aside .rail-block:nth-child(3),aside section:last-child{display:none}.layout{display:flex;flex-direction:column}.event-date{font-size:13px}.filters{display:flex;overflow-x:auto;padding:3px 0}.filters button{flex-shrink:0}.filters span{display:none}.rail-block:nth-child(2){display:none}.toolbar select{width:auto}.views{max-width:100%;overflow-x:auto;flex-wrap:nowrap;padding:4px 0 10px}.views button{flex-shrink:0}.decision{grid-template-columns:1fr}.event-body{padding:6px 14px 18px}.calendar-day{grid-template-columns:55px 1fr}.artist-form{padding:15px}.mobile-account{display:flex!important;gap:10px;flex-wrap:wrap;margin:20px 0}.mobile-account button{flex:1}.auth-panel{margin:7vh auto}}.mobile-account{display:none}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 .event-location{font-size:13px;line-height:1.4;margin-top:5px;color:var(--muted);overflow-wrap:anywhere}.event-location a{display:inline-block;padding:2px 0}
+
+.visit-summary{font-size:13px;margin-top:7px;color:var(--muted)}
+.visit-summary p{margin:4px 0 0;white-space:pre-wrap;color:var(--ink)}
+.return-fields{border-top:1px solid var(--line);padding-top:12px;margin-top:12px;display:grid;gap:7px}
+.return-suggestion{border-left:3px solid var(--blue);padding-left:10px}
+.artist-finding-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px}
+.artist-findings{border-top:1px solid var(--line);padding-top:10px;min-width:0}
+.artist-findings h4{margin:0 0 10px}
+.artist-finding{margin:10px 0;overflow-wrap:anywhere}
+.artist-finding p{margin:5px 0}
+.price-evidence{display:block;font-weight:600;margin:5px 0}
+#event-dialog .event summary a{pointer-events:auto}
