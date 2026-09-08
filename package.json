@@ -7,7 +7,9 @@
     "dev": "vite --configLoader native --host 127.0.0.1",
     "build": "vite build --configLoader native && node scripts/precache.mjs",
     "preview": "vite preview --configLoader native --host 127.0.0.1",
-    "test": "node --test --test-isolation=none tests/*.test.js"
+    "test": "node --test --test-isolation=none tests/*.test.js",
+    "predev": "node scripts/icons.mjs",
+    "prebuild": "node scripts/icons.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.110.0"
