@@ -7,7 +7,7 @@ The public repository contains application code only. Event research, personal d
 ## Features
 
 - The existing forward diary, daily calendar, shortlist, booking queue, reviewed events and archive.
-- Separate planning notes, attendance dates and visit reflections, with a Seen / visit notes view.
+- Planning notes on review cards; attendance dates and visit reflections appear only in Past visits / notes, which includes events marked Seen even after they end.
 - Follow, annotate and pause artists; show research findings alongside each artist.
 - Save directly to Supabase. Failed writes retain the draft; stale writes require review instead of overwriting another device.
 - Background checks while open, plus Check for updates. Offline viewing after the first online visit; offline drafts must be saved after reconnecting.
